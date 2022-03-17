@@ -2,40 +2,25 @@
 #include <stdio.h>
 
 /**
- * main - Fizz for multiples of 3 and Buzz for multiples of 5 FizzBuzz for both
- *
- *
- * Return: Always 0
+ * print_square - Print square line dependent on the integer n.
+ * @n : The number of lines using '#' characters to use per row and column
+ * Return: Void.
  */
-int main(void)
+void print_square(int n)
 {
-	int x = 1;
+	int x;
+	int y;
 
-	while (x < 101)
+	for (y = 0; y < n; y++)
 	{
-		if (x % 3 == 0 && x % 5 == 0)
+		for (x = 0; x < n; x++)
 		{
-			printf("%s", "FizzBuzz");
+			_putchar('#');
 		}
-		else if (x % 3 == 0)
-		{
-			printf("%s", "Fizz");
-		}
-		else if (x % 5 == 0)
-		{
-			printf("%s", "Buzz");
-		}
-		else
-		{
-			printf("%d", x);
-		}
-
-		if (x != 100)
-		{
-		printf(" ");
-		}
-		x++;
+		_putchar('\n');
 	}
-	printf("\n");
-	return (0);
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
 }
