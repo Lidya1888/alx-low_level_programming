@@ -1,22 +1,28 @@
 #include "main.h"
 
 /**
- * string_toupper - lower to upper
- * @s: pointer to char params
- *
- * Return: *s
+ * reverse_array - reverse
+ * @a : pointer to int params
+ * @n : pointer to int params
+ * Return: no
  */
 
-char *string_toupper(char *s)
+void reverse_array(int *a, int n)
 {
 	int i;
+	int j;
+	int tmp;
 
-	for (i = 0; s[i] != '\0'; i++)
+	i = 0;
+	j = n - 1;
+
+	while (i < j)
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
-			s[i] -= 32;
+		tmp = a[i];
+		a[i] = a[j];
+		a[j] = tmp;
+		i++;
+		j--;
 	}
-	return (s);
 }
-© 2022 GitHub, Inc.
-  
+
